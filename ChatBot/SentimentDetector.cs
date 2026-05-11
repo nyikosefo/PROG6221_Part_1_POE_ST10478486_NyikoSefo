@@ -13,7 +13,7 @@ namespace ChatBot
         Worried,
         Curious,
         Frustrated,
-        Positive
+        Positive 
     }
 
     // Wrap the dictionary and methods inside the class

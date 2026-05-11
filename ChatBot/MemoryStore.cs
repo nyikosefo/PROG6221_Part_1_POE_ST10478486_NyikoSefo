@@ -21,7 +21,7 @@ namespace ChatBot
 
         private string[] knownTopics = {
             "phishing", "password", "safe browsing", "2fa",
-            "malware", "vpn", "encryption", "firewall", "ransomware"
+            "malware", "vpn", "encryption", "firewall", "ransomware" 
         };
 
         // 2. ADDED: Constructor to initialize the dictionary

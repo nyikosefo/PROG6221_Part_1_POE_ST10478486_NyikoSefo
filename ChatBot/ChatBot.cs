@@ -47,7 +47,7 @@ namespace ChatBot
     
     // 2. Ask for the name
     string userName = AskForName();
-    user = new UserProfile(userName);
+    user = new UserProfile(userName); 
 
     // 3. Greet the user personally and explain how it works
     DisplayHelper.ShowSpeakerLabel("BOT", ConsoleColor.Green);

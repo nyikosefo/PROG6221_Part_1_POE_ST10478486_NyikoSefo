@@ -68,7 +68,7 @@ namespace ChatBot
             Sentiment s = SentimentDetector.Detect(userInput);
             string empathy = SentimentDetector.GetEmpathyResponse(s);
             if (!string.IsNullOrEmpty(empathy))
-                responses.Add(ChatMessage.Empathy(empathy));
+                responses.Add(ChatMessage.Empathy(empathy)); 
 
             // Step 4: Follow-up
             if (IsFollowUp(userInput) && lastTopic != null)

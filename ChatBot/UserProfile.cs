@@ -14,7 +14,7 @@ namespace ChatBot
             Name = name;
             QuestionsAsked = 0;
             FavouriteTopic = null;
-            Memory = new MemoryStore();
+            Memory = new MemoryStore(); 
             Memory.Store("name", name);
         }
 

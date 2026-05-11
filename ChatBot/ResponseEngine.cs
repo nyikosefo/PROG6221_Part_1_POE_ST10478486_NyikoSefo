@@ -65,6 +65,6 @@ namespace ChatBot
 
             string lower = input.ToLower().Trim();
             return lower == "exit" || lower == "quit" || lower == "bye";
-        }
+        } 
     }
 }

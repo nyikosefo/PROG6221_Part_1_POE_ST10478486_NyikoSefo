@@ -14,7 +14,7 @@ namespace ChatBot
 
         public static void TypeText(string text, ConsoleColor color = ConsoleColor.White,
                                     int delayMs = 25)
-        {
+        { 
             Console.ForegroundColor = color;
             foreach (char c in text)
             {

@@ -16,7 +16,7 @@ namespace ChatBot
         }
 
         // Factory methods so we don't repeat Color values everywhere
-        public static ChatMessage Bot(string text)
+        public static ChatMessage Bot(string text) 
             => new ChatMessage("BOT", text, Color.FromArgb(100, 220, 100));
 
         public static ChatMessage Empathy(string text)
