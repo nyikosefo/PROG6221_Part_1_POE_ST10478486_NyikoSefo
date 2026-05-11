@@ -12,7 +12,6 @@ namespace ChatBot
             Console.ResetColor();
         }
 
-        // Typing effect: prints one character at a time with a delay
         public static void TypeText(string text, ConsoleColor color = ConsoleColor.White,
                                     int delayMs = 25)
         {
@@ -33,11 +32,11 @@ namespace ChatBot
             Console.ResetColor();
         }
 
-        public static void ShowHeader()
+        // NEW for Part 2 — returns ASCII art as a string so the
+        // GUI's RichTextBox can display it (instead of printing to console)
+        public static string GetAsciiArt()
         {
-            Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine(@"
+            return @"
  =======================================================           
   _____       _                 ____        _   
  / ____|     | |               |  _ \      | |  
@@ -47,9 +46,17 @@ namespace ChatBot
  \_____\__, ||_.__/  \___||_|  |____/ \___/ \__|
         __/ |                                   
        |___/
-   Type ""help"" for assistance! 
+   Your Digital Safety Companion
   
-=========================================================");
+=========================================================
+";
+        }
+
+        public static void ShowHeader()
+        {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine(GetAsciiArt());
             Console.ResetColor();
             PrintDivider();
         }

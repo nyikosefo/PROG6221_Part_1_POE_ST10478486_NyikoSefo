@@ -1,16 +1,16 @@
 ﻿using System;
+using System.Windows.Forms;
 
 namespace ChatBot
 {
     class Program
     {
+        [STAThread]
         static void Main(string[] args)
         {
-         
-            ChatBot bot = new ChatBot();
-          
-        
-            bot.StartProgram(); 
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new MainForm());
         }
     }
 }

@@ -43,7 +43,7 @@ namespace ChatBot
 {
     // 1. Bot introduces itself first
     DisplayHelper.ShowSpeakerLabel("BOT", ConsoleColor.Green);
-    DisplayHelper.TypeText("Hello! I am your CyberSecurity Assistant. I'm here to help you stay safe online.", ConsoleColor.Green);
+    DisplayHelper.TypeText("Hello! Welcome to the CyberSecurity Assistant. I'm here to help you stay safe online.", ConsoleColor.Green);
     
     // 2. Ask for the name
     string userName = AskForName();
@@ -114,7 +114,8 @@ private string AskForName()
         }
 
         // 2. Get and Display Bot Response
-        string response = engine.GetResponse(userInput);
+        // FIX: Provide the required out parameter. Use discard if the matched topic is not needed.
+        string response = engine.GetResponse(userInput, out _);
         user.QuestionsAsked++;
 
         if (response != null)
@@ -132,5 +133,6 @@ private string AskForName()
         DisplayHelper.PrintDivider(ConsoleColor.DarkGray);
     }
 }
+
     }
 }
